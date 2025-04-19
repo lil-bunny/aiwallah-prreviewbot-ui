@@ -1,0 +1,218 @@
+/* Dashboard styles for Aiwallah PR Review Bot */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  background-color: #24292e;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#logout-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f6f8fa;
+  border-right: 1px solid #e1e4e8;
+  padding: 2rem 0;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar nav li a {
+  display: block;
+  padding: 0.8rem 2rem;
+  color: #586069;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.sidebar nav li a:hover {
+  background-color: #eaecef;
+}
+
+.sidebar nav li.active a {
+  background-color: #eaecef;
+  color: #24292e;
+  font-weight: 600;
+  border-left: 3px solid #24292e;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.welcome-section {
+  margin-bottom: 3rem;
+}
+
+.welcome-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #24292e;
+}
+
+.action-card {
+  background-color: #f6f8fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid #e1e4e8;
+}
+
+.action-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #24292e;
+}
+
+.primary-btn {
+  background-color: #2ea44f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.primary-btn:hover {
+  background-color: #2c974b;
+}
+
+.repositories-section {
+  margin-top: 2rem;
+}
+
+.repositories-section h2 {
+  margin-bottom: 1.5rem;
+  color: #24292e;
+}
+
+.repositories-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.repository-card {
+  background-color: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.repository-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.repository-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #0366d6;
+}
+
+.repository-card .repo-description {
+  color: #586069;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.repository-card .repo-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #586069;
+}
+
+/* Loading state */
+.repositories-list .loading-spinner {
+  margin: 2rem auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e1e4e8;
+    padding: 1rem 0;
+  }
+  
+  .sidebar nav ul {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 1rem;
+  }
+  
+  .sidebar nav li {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+  }
+  
+  .sidebar nav li a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+  
+  .main-content {
+    padding: 1.5rem;
+  }
+  
+  .repositories-list {
+    grid-template-columns: 1fr;
+  }
+} 

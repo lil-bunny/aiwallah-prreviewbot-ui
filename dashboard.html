@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Aiwallah PR Review Bot</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1>Aiwallah PR Review Bot</h1>
+      <div class="user-info">
+        <span id="username">Loading...</span>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </header>
+    
+    <main class="dashboard-content">
+      <div class="sidebar">
+        <nav>
+          <ul>
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="#">Repositories</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="main-content">
+        <section class="welcome-section">
+          <h2>Welcome, <span id="welcome-name">User</span>!</h2>
+          <p>Connect your GitHub app to start receiving AI-powered code reviews.</p>
+          
+          <div class="action-card">
+            <h3>Connect GitHub App</h3>
+            <p>Install the Aiwallah PR Review Bot on your repositories.</p>
+            <button id="connect-github-btn" class="primary-btn">Connect GitHub App</button>
+          </div>
+        </section>
+        
+        <section class="repositories-section">
+          <h2>Your Repositories</h2>
+          <div id="repositories-list" class="repositories-list">
+            <div class="loading-spinner"></div>
+            <p>Loading your repositories...</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html> 
